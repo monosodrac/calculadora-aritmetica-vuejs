@@ -23,7 +23,6 @@ const props = defineProps(['valorUm', 'valorDois', 'trocaOperador']);
 input {
     border: 1px solid #fff;
     border-radius: 10px;
-    padding-left: .9rem;
     width: 20%;
     height: 2.5rem;
     background-color: transparent;
@@ -49,6 +48,10 @@ input[type=number]::-webkit-outer-spin-button {
     form {
         flex-direction: column;
     }
+
+input {
+    width: 50%;
+}
 
     select {
         margin: 1rem 0;
