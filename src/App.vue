@@ -54,19 +54,39 @@ const calcular = () => {
 </script>
 
 <template>
-  <div class="container d-flex flex-column justify-content-center align-items-center w-50">
-    <Cabecalho />
-    <Calculadora
-      :valor-um="defineValor1"
-      :troca-operador="trocarOperador"
-      :valor-dois="defineValor2"
-    />
-    <p><b>Resultado:</b> {{ aritmetica.resultado }}</p>
-  </div>
+  <section class="calc d-flex flex-column justify-content-center align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center w-50">
+      <Cabecalho />
+      <Calculadora :valor-um="defineValor1" :troca-operador="trocarOperador" :valor-dois="defineValor2" />
+      <p class="text-center">
+        <b>Resultado:</b>
+        <br />
+        {{ aritmetica.resultado }}
+      </p>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.container {
-  height: 100vh;
+* {
+  font-family: "Press Start 2P", system-ui;
 }
+
+.calc {
+  height: 100vh;
+  background-color: #000;
+}
+
+.container {
+  border: 3px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
 </style>
